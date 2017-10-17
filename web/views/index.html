@@ -6,7 +6,7 @@
 	<div class="jumbotron" style='background-color:#428bca'>
 		<div class="container">
 			<h1 align="center" style='color:#f0f0f0'>小bug的成长日记</h1>
-			<h2 align="right" style='color:#eeeeee'>--距离小bug出生还有59天</h2>
+			<h2 align="right" style='color:#eeeeee'>--距离小bug出生还有<span id="leftday">?</span>天</h2>
 		</div>
 	</div>
 
@@ -15,12 +15,24 @@
 		<h1>心情</h1>
 	</div>
 	<p>第一次要当爹，心情很复杂</p>
-	<div class="container">
-		<img title='123' src="/statics/1.jpg" width=1024>
+	<div class="container" align="center">
+		<img title='123' src="/statics/1.jpg" width=100%>
 	</div>
 {% endblock %}
 
 
 {% block beforehead %}
-
+<script type="text/javascript">
+	'use strict'
+	$(function(){
+		function GetDateDiff(startDate,endDate)  
+		{     
+			var startDate = new Date();
+			var endDate = new Date(2017,11,9);
+	    	var dates = Math.abs((startDate - endDate))/(1000*60*60*24);     
+	    	return  parseInt(dates);    
+		}
+		$('#leftday').text(GetDateDiff());
+	});
+</script>
 {% endblock %}
