@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block title %}相册{% endblock %}
+{% block content %}<!-- content  -->
+<div class="container-fluid">
+<div class="responsive">
+  <div class="img">
+    <a target="_blank" href="http://wx1.sinaimg.cn/large/8f5d6eb0gy1ffrkqobzluj20qo140q5u.jpg">
+      <img src="http://wx1.sinaimg.cn/large/8f5d6eb0gy1ffrkqobzluj20qo140q5u.jpg" alt="图片文本描述" width="300" height="200">
+    </a>
+  </div>
+</div>
+ 
+<div class="responsive">
+  <div class="img">
+    <a target="_blank" href="http://wx4.sinaimg.cn/large/8f5d6eb0gy1ffrkqn3ajnj20qo140dll.jpg">
+      <img src="http://wx4.sinaimg.cn/large/8f5d6eb0gy1ffrkqn3ajnj20qo140dll.jpg" alt="图片文本描述" width="300" height="200">
+    </a>
+  </div>
+</div>
+ 
+<div class="responsive">
+  <div class="img">
+    <a target="_blank" href="http://wx3.sinaimg.cn/large/8f5d6eb0gy1ffrkqrb2jjj20qo140tdn.jpg">
+      <img src="http://wx3.sinaimg.cn/large/8f5d6eb0gy1ffrkqrb2jjj20qo140tdn.jpg" alt="图片文本描述" width="300" height="200">
+    </a>
+  </div>
+</div>
+<div class="responsive">
+  <div class="img">
+    <a target="_blank" href="http://wx1.sinaimg.cn/large/8f5d6eb0gy1ffrkqt2jarj21400qo43x.jpg">
+      <img src="http://wx1.sinaimg.cn/large/8f5d6eb0gy1ffrkqt2jarj21400qo43x.jpg" alt="图片文本描述" width="450" height="300">
+    </a>
+  </div>
+</div>
+</div>
+{% endblock %}
+
+
+{% block beforehead %}
+<style>
+div.img {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 30%
+}
+
+div.img:hover {
+    border: 1px solid #777;
+}
+
+div.img img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+</style>
+<script type="text/javascript">
+  $(function(){
+    $('a[href="/album"]').trigger('onclick')
+});
+</script>
+{% endblock %}

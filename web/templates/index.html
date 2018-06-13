@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block title %}主页{% endblock %}
+
+{% block beforehead %}
+    <script src="/statics/js/index.js"></script>
+{% endblock %}
+
+{% block content %}<!-- content  -->
+
+	
+	<div class="jumbotron" align="center" style="color:#fff;background-color:#337ab7;">
+		<div class="container">
+        	<h1>小bug的成长日记</h1>
+        	<p align="right">——小bug已经出生<span id='leftday' style="color: red"></span>天了</p>
+    	</div>
+    </div>
+    <div class="container" role="main">
+    	<div class="container col-md-9" role="right">
+			<div class="page-header">
+				<h1>心情</h1>
+			</div>
+			<article>
+				<div>
+			        <h1><a href="/article/123">标题</a></h1>
+			        <div class="post-meta">
+			            <time title="2017年8月9日星期三下午4点57分">2017年8月9日</time>
+			        </div>
+			    </div>
+			    <div class="post-content">
+			        <p>
+			        	小bug小bug小bug小bug小bug小bug小bug小bug小bug小bug小bug小bug小bug小bug小bug小bug小bug小bug
+			        	小bug小bug小bug小bug小bug小bug小bug小bug小bug小bug小bug小bug小bug小bug小bug小bug小bug小bug
+			    		小bug小bug小bug小bug小bug小bug小bug小bug小bug小bug小bug小bug小bug小bug小bug小bug小bug小bug
+					</p>
+			    </div>
+			    <div>
+			        <a href="/article/123" class="btn btn-primary">阅读全文</a>
+			    </div>
+
+			    <footer>
+			    </footer>
+			</article>
+		</div>
+	    <div class="container col-md-3 .panel-heading" role="lelf">
+	    	<ul>
+	    		<li><a href="#">占位符</a></li>
+	    		<li><a href="#">占位符</a></li>
+	    		<li><a href="#">占位符</a></li>
+	    		<li><a href="#">占位符</a></li>
+	    		<li><a href="#">占位符</a></li>
+	    		<li><a href="#">占位符</a></li>
+	    		<li><a href="#">占位符</a></li>
+	    		<li><a href="#">占位符</a></li>
+	    		<li><a href="#">占位符</a></li>
+	    		<li><a href="#">占位符</a></li>
+	    		<li><a href="#">占位符</a></li>
+	    	</ul>
+	    </div>
+	</div>
+	
+{% endblock %}

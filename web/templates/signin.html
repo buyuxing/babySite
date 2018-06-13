@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block title %}登录{% endblock %}
+
+{% block beforehead %}
+	<script src="/statics/js/index.js"></script>
+	<script src="/statics/js/signin.js"></script>
+{% endblock %}
+
+{% block content %}
+	<div class="container">
+		<div class="page-header" align="center">
+			<h1>管理员登录</h1>
+		</div>
+		<div id="signinform" class="container" style="width: 50%">
+			<form v-on:submit.prevent="login" class="form-horizontal" action="/manage/login" method="post">
+	  			<div class="form-group">
+				    <label for="inputEmail" class="col-sm-2 control-label">用户名</label>
+				    <div class="col-sm-10">
+				    	<input v-model="username" type="text" name="username" class="form-control" id="inputEmail" placeholder="Username">
+					</div>
+	 			</div>
+			  	<div class="form-group">
+				    <label for="inputPassword" class="col-sm-2 control-label">密码</label>
+				    <div class="col-sm-10">
+				    	<input v-model="password" type="password" name="password" class="form-control" id="inputPassword" placeholder="Password">
+					</div>
+			  	</div>
+	  			<div class="form-group">
+	    			<div class="col-sm-offset-2 col-sm-10">
+						<button type="submit" class="btn btn-primary btn-block">登录</button>
+	    			</div>
+	  			</div>
+			</form>
+		</div>
+	</div>
+{% endblock %}
